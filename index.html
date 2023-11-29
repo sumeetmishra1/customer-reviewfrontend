@@ -2,43 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/cdb.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Review</title>
 </head>
-<body>
-    <h2 class="text-center text-decoration-underline text-primary">Add a Review</h2>
+<body class="bg-body-secondary">
+    <h2 class="text-center  text-bg-secondary pb-2 " style="font-family: Verdana;">Customer Review</h2>
 <div class="container mt-4">
-    <form action="" class="form" id="reviewform">
-        <label for="company" class="form-label">Company Name:</label>
+    <form action="" class="form" id="reviewform" method="post">
+        <label for="company" class="col-form-label-lg">Company Name:</label>
         <input type="text" id="company" class="form-control form-control-sm">
-        <label for="pros"class="form-label">Pros:</label>
+        <label for="pros"class="col-form-label-lg">Pros:</label>
         <input type="text"id="pros" class="form-control form-control-sm">
-        <label for="cons"class="form-label">Cons:</label>
+        <label for="cons"class="col-form-label-lg">Cons:</label>
         <input type="text" id="cons" class="form-control form-control-sm">
-        <label for="rating" class="form-label">Rating</label>
-        <select name="rating" id="rating" class="form-select form-select-sm">
-            <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-        </select>
+        <div id="rating1" class="star-rating" role="rating" data-rating="3">
+            <span class="star" data-value="1">&#9733;<span class="star-rating"></span></span>
+            <span class="star" data-value="2">&#9733;<span class="star-rating"></span></span>
+            <span class="star" data-value="3">&#9733;<span class="star-rating"></span></span>
+            <span class="star" data-value="4">&#9733;<span class="star-rating"></span></span>
+            <span class="star" data-value="5">&#9733;<span class="star-rating"></span></span>
+          </div>
         <br>
-        <button class="btn-primary" type="submit">Submit</button>
+        <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>
     <div class="container mt-5">
-        <form action="" class="form" id="searchform">
-        <input type="text" id="searchname">
-        <button class="btn-secondary">Search</button>
+        <form action="/" class="form" id="searchform" method="post">
+        <input type="text" id="searchname" class="m-1">
+        <button class="btn btn-dark">Search</button>
     </form>
     <ul class="list-group" id="reviewlist">
-
+        <h1 class="text-center mt-2">
+            No Reviews found!
+        </h1>
     </ul>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
